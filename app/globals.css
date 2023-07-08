@@ -16,6 +16,11 @@
   }
 }
 
+@font-face {
+  font-family: genshin;
+  src: url("../public/genshin.ttf");
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -24,4 +29,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+*{
+  font-family: genshin;
 }
