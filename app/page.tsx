@@ -1,9 +1,10 @@
 import Image from "next/image";
+import Hero from "@/components/Hero/Hero";
 
 export default function Home() {
   return (
     <main className="">
-      <h1>Genshin Impact</h1>
+      <Hero></Hero>
     </main>
   );
 }
