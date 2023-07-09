@@ -1,13 +1,14 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "../public/image/logo.png";
+import Logo from "../../public/image/logo.png";
+import styles from "./Navbar.module.css";
 
 type Props = {};
 
 export default function Navbar({}: Props) {
   return (
-    <nav className={`p-2 `}>
+    <nav className={`p-2 fixed top-0 `}>
       <div className={`w-9/12 mx-auto flex justify-between items-center`}>
         <Link href="/">
           <Image src={Logo} width={120} alt="logo" />

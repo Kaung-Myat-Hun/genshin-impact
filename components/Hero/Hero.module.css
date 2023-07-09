@@ -4,4 +4,30 @@
   object-fit: cover;
   position: fixed;
   background-image: url('../../public/video/main-bg.gif');
+  z-index: -5;
+}
+.motionDivBg{
+  width: 90vw;
+  height: 100vh;
+  background-image: url('../../public/video/firstimage.png');
+  background-size: cover;
+  position: fixed;
+  z-index: -1;
+  overflow: hidden;
+  transform: translateX(600px);
+  animation: dendlion 9s infinite linear ;
+  animation-delay: 4s;
+}
+
+@keyframes dendlion {
+  0%{
+    z-index: -1;
+    transform: translateX(300px);
+  }
+  100%{
+    z-index: -1;
+    transform: translateX(-4000px);
+    transform: translateY(300px);
+    opacity: 0;
+  }
 }

@@ -1,7 +1,8 @@
 import React from "react";
-import styles from "./hero.module.css";
+import styles from "./Hero.module.css";
 import Image from "next/image";
 import bgVideo from "../../public/video/main-bg.gif";
+
 type Props = {};
 
 export default function Hero({}: Props) {
@@ -15,6 +16,7 @@ export default function Hero({}: Props) {
           alt="bg image"
           className={styles.video}
         ></Image>
+        <div className={styles.motionDivBg}></div>
       </div>
       <h1>Hero</h1>
     </div>

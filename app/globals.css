@@ -30,6 +30,9 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+body::-webkit-scrollbar{
+  width: 1px;
+}
 *{
   font-family: genshin;
 }
