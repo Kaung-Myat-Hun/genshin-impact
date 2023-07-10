@@ -20,9 +20,6 @@ export default function Hero({}: Props) {
           <div className={styles.motionDivBg}></div>
         </div>
       </div>
-      <div className={`${styles.heroContent}`}>
-        <h1>Hello</h1>
-      </div>
     </>
   );
 }

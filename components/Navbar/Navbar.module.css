@@ -1,6 +1,23 @@
 .navbarContainer{
   z-index: 10 !important;
-  background-color: #7f7f7f4d;
-  position: sticky;
+  width: 100vw;
+  backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.671);
+  position: fixed;
   top: 0;
+}
+.navLinksContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+}
+.navLinkContainer a{
+  padding: 10px 20px;
+  transition: 0.3s all ease-in-out;
+}
+.navLinkContainer a:hover{
+  color: rgba(74, 172, 74, 0.829);
 }
