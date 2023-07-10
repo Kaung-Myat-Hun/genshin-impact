@@ -8,8 +8,12 @@ type Props = {};
 
 export default function Navbar({}: Props) {
   return (
-    <nav className={`p-2 fixed top-0 `}>
-      <div className={`w-9/12 mx-auto flex justify-between items-center`}>
+    <nav
+      className={`${styles.navbarContainer} flex justify-center items-center`}
+    >
+      <div
+        className={`w-9/12 mx-auto flex justify-between items-center opacity-100`}
+      >
         <Link href="/">
           <Image src={Logo} width={120} alt="logo" />
         </Link>

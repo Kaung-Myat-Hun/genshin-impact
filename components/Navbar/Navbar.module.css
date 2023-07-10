@@ -1,0 +1,6 @@
+.navbarContainer{
+  z-index: 10 !important;
+  background-color: #7f7f7f4d;
+  position: sticky;
+  top: 0;
+}
