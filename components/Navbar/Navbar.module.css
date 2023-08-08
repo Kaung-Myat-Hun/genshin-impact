@@ -19,5 +19,8 @@
   transition: 0.3s all ease-in-out;
 }
 .navLinkContainer a:hover{
-  color: rgba(74, 172, 74, 0.829);
+  color: rgba(88, 207, 88, 0.829);
+}
+.active{
+  text-shadow: 2px 3px 4px rgba(174, 238, 102, 0.829);
 }
