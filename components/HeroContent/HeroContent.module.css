@@ -1,3 +1,30 @@
 .contentContainer{
   margin-top: 9.5vh;
+  position: relative;
+}
+.primogem{
+  width: 50px;
+  height: 50px;
+  margin: 20px;
+  transition: all 0.5s ease-in-out;
+  right: 70px;
+  position: absolute;
+}
+.primogem:hover{
+  cursor: pointer;
+  transform: rotate(-180deg);
+}
+.dropDown{
+  position: absolute;
+  right: 40px;
+  top: 80px;
+  background-image: url('../../public/image/frame.webp');
+  background-size: cover;
+  object-fit: cover;
+  height: 0vh;
+  width: 150px;
+  transition: all 0.5s ease-in-out;
+}
+.primogem:hover .dropDown{
+  height: 10vh;
 }
