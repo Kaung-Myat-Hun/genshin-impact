@@ -9,7 +9,7 @@ type Props = {};
 type InitialStateType = {
   characters: boolean;
   nations: boolean;
-  weapons: boolean;
+  // weapons: boolean;
   visions: boolean;
 }
 
@@ -17,7 +17,7 @@ export default function Navbar({}: Props) {
   const initialState = {
     characters: false,
     nations: false,
-    weapons: false,
+    // weapons: false,
     visions: false,
   };
   const [active, setActive] = React.useState<InitialStateType>(initialState);
