@@ -2,10 +2,23 @@
   width: 120px;
 }
 .footercontainer{
-  padding: 10px;
+  padding: 0px;
   position: absolute;
   bottom: 0;
   right: 0;
   left: 0;
   font-family: sans-serif !important;
+}
+.microsoftIcon{
+  margin: 30px 0px 30px 30px;
+  width: 100px;
+}
+.appleIcon{
+  width: 80px;
+}
+.androidIcon{
+  width: 80px;
+}
+.playstationIcon{
+  width: 50px;
 }
