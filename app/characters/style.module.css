@@ -2,7 +2,7 @@
   background-image: url('../../public/background/scroll-bg.webp');
   background-position: bottom;
   background-size: cover;
-  padding: 8vh 0px 16vh;
+  padding: 10vh 0px 16vh;
   height: 100vh;
 }
 .btn{
@@ -27,7 +27,7 @@
   margin: 20px auto;
   padding: 10px auto;
   gap: 30px;
-  height: 65vh;
+  height: 62.3vh;
   overflow-y: scroll;
 }
 .cardContainer::-webkit-scrollbar{
