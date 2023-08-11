@@ -21,12 +21,12 @@ export default function Footer({}: Props) {
             className={styles.hoyoverse}
           ></Image>
           <br />
-          <p className={`text-sm text-center`}>Credits to <br /> <Link href="https://hoyoverse.com/">hoyoverse.com</Link></p>
+          <p className={`text-sm text-center`}>Credits to <br /> </p><Link href="https://hoyoverse.com/">hoyoverse.com</Link>
         </div>
         <div className={`flex flex-col text-center items-center`}>
-          <p>Cross Platform RPG Game</p>
-          <p className={`flex items-center justify-center`}> 
-          <p>Available at : </p>
+          <div>Cross Platform RPG Game</div>
+          <div className={`flex items-center justify-center`}> 
+            <div>Available at : </div>
             <Link href="">
               <Image src={microsoftIcon} alt="microsoft" className={styles.microsoftIcon}></Image>
             </Link>
@@ -39,8 +39,8 @@ export default function Footer({}: Props) {
             <Link href="">
               <Image src={playstationIcon} alt="microsoft" className={styles.playstationIcon}></Image>
             </Link>
-          </p>
-          <small>Redesign and Created by <Link href="https://github.com/KaungMyatHun-15691">Bate Thar</Link></small>
+          </div>
+          <small>Redesign and Created By <Link href="https://github.com/KaungMyatHun-15691">Bate Thar</Link></small>
         </div>
         <div className={`text-center pt-5`}>
           <Link href="/"><small>Home</small></Link> <br />

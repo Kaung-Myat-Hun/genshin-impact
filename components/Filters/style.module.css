@@ -1,0 +1,28 @@
+.btn{
+  width: 150px;
+  cursor: pointer;
+  z-index: 12;
+}
+.filterContainer{
+  width: 70vw;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.filterDropdownContainer{
+  visibility: hidden;
+  height: 0;
+  z-index: 100;
+}
+.filterText{
+  position: absolute;
+  margin-top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  user-select: none;
+}
+.filterBtnContainer{
+  position: relative;
+  z-index: 100;
+}

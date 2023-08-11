@@ -1,0 +1,35 @@
+.cardContainer{
+  width: 150px;
+  height: 190px;
+  background-color: #bdd4c1;
+  border-radius: 10px;
+  border: 2px solid #89c192;
+  cursor: pointer;
+  z-index: 1;
+}
+.card{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1;
+}
+.visionIcon{
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+.avatarImage{
+  position: absolute;
+  top: 30px;
+  left:28px;
+  z-index: 1;
+}
+.cardText{
+  position: absolute;
+  bottom: -160px;
+  cursor: pointer;
+  color: #4c4c4c;
+  z-index: 1;
+}

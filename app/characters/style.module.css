@@ -1,0 +1,35 @@
+.characterContainer{
+  background-image: url('../../public/background/scroll-bg.webp');
+  background-position: bottom;
+  background-size: cover;
+  padding: 8vh 0px 16vh;
+  height: 100vh;
+}
+.btn{
+  width: 150px;
+}
+.filterContainer{
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.filterDropdownContainer{
+  visibility: hidden;
+}
+
+.cardContainer{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  align-items: center;
+  width: 75vw;
+  margin: 20px auto;
+  padding: 10px auto;
+  gap: 20px;
+  height: 65vh;
+  overflow-y: scroll;
+}
+.cardContainer::-webkit-scrollbar{
+  width: 0;
+}

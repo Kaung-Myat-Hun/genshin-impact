@@ -21,7 +21,7 @@ export default function Hero({}: Props) {
           <div className={styles.btnOuterContainer}>
             <div className={styles.btnContainer}>
               <Image src={btnExplore} alt="btn explore" className={styles.btnExplore}/>
-              <p className={styles.btnText}><Link href="/characters">Explore</Link></p>
+              <Link className={styles.btnText} href="/characters">Explore</Link>
             </div>
           </div>
           <div className={styles.motionDivBg}></div>

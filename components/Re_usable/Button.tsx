@@ -1,14 +1,13 @@
 type Props = {
-  children: String;
-  className?: String;
-  type?: String;
-  onClick?: void;
+  children: string |undefined;
+  className?: string | "";
+  type?: string | undefined;
+  onClick?: (e:any) => void | undefined;
 };
 
-const Button = (props: Props) => {
+export const Button = (props: Props) => {
   return (
     <button
-      type={props.type}
       className={props.className}
       onClick={props.onClick}
     >

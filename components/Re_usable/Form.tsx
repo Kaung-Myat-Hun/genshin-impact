@@ -1,8 +1,7 @@
 "use client";
-import React from "react";
-import Input from "./Input";
-import Button from "./Button";
-import Lable from "./Label";
+import React, { FormEventHandler, MouseEventHandler } from "react";
+import {Input} from "./Input";
+import {Button} from "./Button";
 
 type Props = {
   type?: String;
@@ -10,48 +9,26 @@ type Props = {
 };
 
 const Form = (props: Props) => {
-  const [showPass, setShowPass] = useState<Boolean>(false);
+  const nameChangeHandler = (e: any) =>{
+    console.log(e.target.value);
+  }
+  const emailChangeHandler = (e: any) => {
+    console.log(e.target.value);
+  }
+  const messageChangeHandler = (e: any) => {
+    console.log(e.target.value);
+  }
+  const submitHandler = (e: any) => {
+    e.preventDefault();
+  }
   return (
     <>
-      {props.type === "login" ? (
-        <form onSubmit={props.onSubmit}>
-          <Input placeholder="Enter email" type="text" />
-          <Input
-            placeholder="Enter password"
-            type={showPass ? "text" : "password"}
-          />
-          <Input
-            type="checkbox"
-            onChange={() => {
-              setShowPass(!showPass);
-            }}
-            id="password"
-          />
-          <Lable for="password">Show Password</Lable>
-          <Button>Login</Button>
-        </form>
-      ) : (
-        <form onSubmit={props.onSubmit}>
-          <Input placeholder="Enter email" type="text" />
-          <Input
-            placeholder="Enter password"
-            type={showPass ? "text" : "password"}
-          />
-          <Input
-            placeholder="Enter confirm password"
-            type={showPass ? "text" : "password"}
-          />
-          <Input
-            type="checkbox"
-            onChange={() => {
-              setShowPass(!showPass);
-            }}
-            id="password"
-          />
-          <Lable for="password">Show Password</Lable>
-          <Button>Register</Button>
-        </form>
-      )}
+      <form>
+        <Input type="text" placeholder="Name" onChange={nameChangeHandler} className={""}  />
+        <Input type="text" placeholder="Email" onChange={emailChangeHandler} className={""} />
+        <Input type="text" placeholder="Message" onChange={messageChangeHandler} className={""} />
+        <Button onClick={submitHandler} className={""} >Submit</Button>
+      </form>
     </>
   );
 };
