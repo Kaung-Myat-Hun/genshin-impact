@@ -6,6 +6,12 @@ import Logo from "../../public/image/logo.png";
 import styles from "./Navbar.module.css";
 
 type Props = {};
+type InitialStateType = {
+  characters: boolean;
+  nations: boolean;
+  weapons: boolean;
+  visions: boolean;
+}
 
 export default function Navbar({}: Props) {
   const initialState = {
@@ -14,7 +20,7 @@ export default function Navbar({}: Props) {
     weapons: false,
     visions: false,
   };
-  const [active, setActive] = React.useState<{}>(initialState);
+  const [active, setActive] = React.useState<InitialStateType>(initialState);
   return (
     <nav className={`${styles.navbarContainer}`}>
       <div className={`${styles.navLinksContainer}`}>
@@ -25,17 +31,19 @@ export default function Navbar({}: Props) {
           <Link
             onClick={() =>
               setActive({
+                ...initialState,
                 characters: true,
               })
             }
             href="/characters"
-            className={active.characters ? styles["active"] : ""}
+            className={active.characters  ? styles["active"] : ""}
           >
             Characters
           </Link>
           <Link
             onClick={() =>
               setActive({
+                ...initialState,
                 nations: true,
               })
             }
@@ -58,6 +66,7 @@ export default function Navbar({}: Props) {
           <Link
             onClick={() =>
               setActive({
+                ...initialState,
                 visions: true,
               })
             }
