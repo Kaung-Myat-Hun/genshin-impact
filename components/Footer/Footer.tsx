@@ -40,7 +40,7 @@ export default function Footer({}: Props) {
               <Image src={playstationIcon} alt="microsoft" className={styles.playstationIcon}></Image>
             </Link>
           </p>
-          <small>Redesign and created by <Link href="https://github.com">Bate Thar</Link></small>
+          <small>Redesign and created by <Link href="https://github.com/KaungMyatHun-15691">Bate Thar</Link></small>
         </div>
         <div className={`text-center pt-5`}>
           <Link href="/"><small>Home</small></Link> <br />
