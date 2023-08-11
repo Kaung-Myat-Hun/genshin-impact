@@ -44,7 +44,7 @@ export default function Navbar({}: Props) {
           >
             Nations
           </Link>
-          <Link
+          {/* <Link  updated in new version
             onClick={() =>
               setActive({
                 weapons: true,
@@ -54,7 +54,7 @@ export default function Navbar({}: Props) {
             className={active.weapons ? styles["active"] : ""}
           >
             Weapons
-          </Link>
+          </Link> */}
           <Link
             onClick={() =>
               setActive({

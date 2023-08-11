@@ -1,3 +1,11 @@
 .hoyoverse{
   width: 120px;
 }
+.footercontainer{
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  font-family: sans-serif !important;
+}
