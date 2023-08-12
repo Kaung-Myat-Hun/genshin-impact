@@ -3,6 +3,10 @@
   height: 100vh;
   z-index: 1000;
   position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 .loadingImage{
   width: 300px;

@@ -3,17 +3,20 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import styles from "./Motion.module.css";
 
+import { Suspense } from "react";
+import  Loading  from "./loading";
+
 export default function Motion(props: any) {
   const [loading, setLoading] = useState(true);
   setTimeout(() => {
     setLoading(false);
-  }, 1000);
+  }, 2000);
   return (
     <AnimatePresence>
       {loading ? (
-        <h1>Loading...</h1>
+        <Loading />
       ) : (
-        <motion.div
+          <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 20 }}
