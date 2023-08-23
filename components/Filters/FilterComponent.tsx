@@ -98,7 +98,26 @@ export default function FilterComponent(props: Props) {
   const [filter, setFilter] = useState<String>("")
   const [filteredString, setFilteredString] = useState<String>("")
   const [show, setShow] = useState<Boolean>(false)
-  console.log(filter, "|", filteredString);
+
+  const resetFunction = () =>{
+    setFilter("")
+    setFilteredString("")
+    setShow(false)
+  }
+  const changeSubfilter = (item:String) =>{
+    setShow(false)
+    setFilteredString(item)
+  }
+  const changeMainFilter = (item: String) => {
+    if(filteredString !== ""){
+      setFilteredString("")
+      setFilter(item)
+      setShow(true)
+    }else{
+      setFilter(item)
+      setShow(true)
+    }
+  }
   return (
     <>
       <div className={styles.filterContainer}>
@@ -107,26 +126,20 @@ export default function FilterComponent(props: Props) {
               <div className={styles.filterBtnContainer}>
                 <Image src={BtnImage} className={styles.btn} alt='btn image'  />
                   <div className={styles.filterText} onClick={() => {
-                    if(filteredString !== ""){
-                      setFilteredString("")
-                      setFilter(item.filter)
-                      setShow(true)
-                    }else{
-                      setFilter(item.filter)
-                      setShow(true)
-                    }
-                  }}>{filter === item.filter && filteredString !== "" ? filteredString : item.filter}</div>
+                    changeMainFilter(item.filter)
+                  }}>{filter === item.filter && filteredString !== "" ? filteredString : item.filter}{/*This is dynamic text change on filter*/} </div>
               </div>
               <div>
-                <div className={styles.filterDropdownContainer} style={item.filter === filter && show? {visibility: "visible"} : {}}>
+                <div className={styles.filterDropdownContainer}  /*
+                  This is Show toggle on off 
+                */ style={item.filter === filter && show? {visibility: "visible"} : {}}>
                   {item.data.map((itemF : {
                     name: string
                   } , index : number,) => (
                     <div className={styles.filterBtnContainer} key={index}>
                     <Image src={BtnImage} className={styles.btn} alt='btn image'  />
                       <div className={styles.filterText} onClick={() => {
-                        setShow(false)
-                        setFilteredString(itemF.name)
+                        changeSubfilter(itemF.name)
                       }}>{itemF.name}</div>
                   </div>
                   ))}
@@ -138,11 +151,7 @@ export default function FilterComponent(props: Props) {
             filter !== "" || filteredString !== "" ? (
               <div className={styles.filterBtnContainer}>
               <Image src={BtnImage} className={styles.btn} alt='btn image'  />
-              <div className={styles.filterText} onClick={() => {
-                setFilter("")
-                setFilteredString("")
-                setShow(false)
-              }}>Reset</div>
+              <div className={styles.filterText} onClick={resetFunction}>Reset</div>
               </div>
             ) : <div style={{width: "150px"}}></div>
           }
