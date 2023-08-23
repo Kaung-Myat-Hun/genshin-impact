@@ -127,7 +127,7 @@ export default function FilterComponent(props: Props) {
                 <Image src={BtnImage} className={styles.btn} alt='btn image'  />
                   <div className={styles.filterText} onClick={() => {
                     changeMainFilter(item.filter)
-                  }}>{filter === item.filter && filteredString !== "" ? filteredString : item.filter}{/*This is dynamic text change on filter*/} </div>
+                  }}>{filter === item.filter && filteredString !== "" ? filteredString : item.filter}{/*This is dynamic text change on filter*/}</div>
               </div>
               <div>
                 <div className={styles.filterDropdownContainer}  /*
