@@ -105,22 +105,32 @@ export default function FilterComponent(props: Props) {
       <div className={styles.filterContainer}>
           {finalData.map((item : any, index : number) => (
             <div key={index} onClick={() => {
-              setFilter(item.filter)
+              if(filter === item.filter){
+                setFilter("")
+              }else{
+                setFilter(item.filter)
+              }
             }}>
               <div className={styles.filterBtnContainer}>
                 <Image src={BtnImage} className={styles.btn} alt='btn image'  />
                   <div className={styles.filterText} onClick={() => {
-                    setFilter(item.filter)
+                    if(filter === item.filter){
+                      setFilter("")
+                    }else{
+                      setFilter(item.filter)
+                    }
                   }}>{item.filter}</div>
               </div>
               <div>
                 <div className={styles.filterDropdownContainer} style={filter===item.filter? {visibility: "visible"} : {}}>
-                  {item.data.map((itemF : string , index : number) => (
+                  {item.data.map((itemF : {
+                    name: string
+                  } , index : number,) => (
                     <div className={styles.filterBtnContainer} key={index}>
                     <Image src={BtnImage} className={styles.btn} alt='btn image'  />
                       <div className={styles.filterText} onClick={() => {
-                        setFilter(itemF.name)
-                      }}>{itemF.name}</div>
+                        setFilter(itemF.name )
+                      }}>{itemF.name }</div>
                   </div>
                   ))}
                 </div>
