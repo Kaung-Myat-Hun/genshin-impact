@@ -96,41 +96,38 @@ const finalData = [
 
 export default function FilterComponent(props: Props) {
   const [filter, setFilter] = useState<String>("")
-  useEffect(() => {
-    console.log(filter);
-  }, [])
-  
+  const [filteredString, setFilteredString] = useState<String>("")
+  const [show, setShow] = useState<Boolean>(false)
+  console.log(filter, "|", filteredString);
   return (
     <>
       <div className={styles.filterContainer}>
           {finalData.map((item : any, index : number) => (
-            <div key={index} onClick={() => {
-              if(filter === item.filter){
-                setFilter("")
-              }else{
-                setFilter(item.filter)
-              }
-            }}>
+            <div key={index}>
               <div className={styles.filterBtnContainer}>
                 <Image src={BtnImage} className={styles.btn} alt='btn image'  />
                   <div className={styles.filterText} onClick={() => {
-                    if(filter === item.filter){
-                      setFilter("")
+                    if(filteredString !== ""){
+                      setFilteredString("")
+                      setFilter(item.filter)
+                      setShow(true)
                     }else{
                       setFilter(item.filter)
+                      setShow(true)
                     }
-                  }}>{item.filter}</div>
+                  }}>{filter === item.filter && filteredString !== "" ? filteredString : item.filter}</div>
               </div>
               <div>
-                <div className={styles.filterDropdownContainer} style={filter===item.filter? {visibility: "visible"} : {}}>
+                <div className={styles.filterDropdownContainer} style={item.filter === filter && show? {visibility: "visible"} : {}}>
                   {item.data.map((itemF : {
                     name: string
                   } , index : number,) => (
                     <div className={styles.filterBtnContainer} key={index}>
                     <Image src={BtnImage} className={styles.btn} alt='btn image'  />
                       <div className={styles.filterText} onClick={() => {
-                        setFilter(itemF.name )
-                      }}>{itemF.name }</div>
+                        setShow(false)
+                        setFilteredString(itemF.name)
+                      }}>{itemF.name}</div>
                   </div>
                   ))}
                 </div>
@@ -138,11 +135,13 @@ export default function FilterComponent(props: Props) {
             </div>
           ))}
           {
-            filter !== "" ? (
+            filter !== "" || filteredString !== "" ? (
               <div className={styles.filterBtnContainer}>
               <Image src={BtnImage} className={styles.btn} alt='btn image'  />
               <div className={styles.filterText} onClick={() => {
                 setFilter("")
+                setFilteredString("")
+                setShow(false)
               }}>Reset</div>
               </div>
             ) : <div style={{width: "150px"}}></div>
