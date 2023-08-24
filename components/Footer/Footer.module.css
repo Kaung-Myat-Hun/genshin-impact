@@ -23,7 +23,10 @@
 .playstationIcon{
   width: 40px;
 }
-@media screen and (max-width: 576px) {
+.showText{
+  display: none;
+}
+@media screen and (max-width: 820px) {
   .microsoftIcon, .appleIcon, .androidIcon, .playstationIcon{
     display: none;
   }
@@ -50,5 +53,11 @@
     display: block;
     padding-bottom: 30px;
     margin-top: 0px;
+  }
+  .rpgContainer{
+    display: none !important;
+  }
+  .showText{
+    display: block !important;
   }
 }

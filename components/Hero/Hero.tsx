@@ -9,8 +9,8 @@ type Props = {};
 export default function Hero({}: Props) {
   return (
     <>
-      <div>
-        <div className={""}>
+      <div className={styles.mainContainer}>
+        <div className={``}>
           <Image
             src={bgVideo}
             width={500}
