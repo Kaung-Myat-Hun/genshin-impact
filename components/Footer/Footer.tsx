@@ -21,9 +21,9 @@ export default function Footer({}: Props) {
             className={styles.hoyoverse}
           ></Image>
           <br />
-          <p className={`text-sm text-center`}>Credits to <br /> </p><Link href="https://hoyoverse.com/">hoyoverse.com</Link>
+          <p className={`text-sm text-center ${styles.creditsText}`}>Credits to <br /> </p><Link className={styles.footerLink} href="https://hoyoverse.com/">hoyoverse.com</Link>
         </div>
-        <div className={`flex flex-col text-center items-center`}>
+        <div className={`flex flex-col text-center items-center max-[576px]:hidden`}>
           <div>Cross Platform RPG Game</div>
           <div className={`flex items-center justify-center`}> 
             <div>Available at : </div>
@@ -40,9 +40,10 @@ export default function Footer({}: Props) {
               <Image src={playstationIcon} alt="microsoft" className={styles.playstationIcon}></Image>
             </Link>
           </div>
-          <small>Redesign and Created By <Link href="https://github.com/KaungMyatHun-15691">Bate Thar</Link></small>
+          <small className={`${styles.footerSmallText} max-[576px]:hidden`}>Redesign and Created By <Link href="https://github.com/KaungMyatHun-15691">Bate Thar</Link></small>
         </div>
-        <div className={`text-center pt-5`}>
+          <small className={`${styles.footerSmallText} max-[575px]:block min-[576px]:hidden`}>Redesign and Created By <Link href="https://github.com/KaungMyatHun-15691">Bate Thar</Link></small>
+        <div className={`text-center pt-5 ${styles.footerText}`}>
           <Link href="/"><small>Home</small></Link> <br />
           <Link href="/contact"><small>Contact</small></Link> <br />
           <Link href="https://genshin.hoyoverse.com"><small>Go to official site</small></Link>
