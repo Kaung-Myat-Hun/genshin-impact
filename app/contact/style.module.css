@@ -19,3 +19,10 @@
   transform: translate(-50%, -50%);
   font-size: 30px;
 }
+.characterContainer{
+  background-image: url('../../public/background/scroll-bg.webp');
+  background-position: bottom;
+  background-size: cover;
+  padding: 8vh 0px 16vh;
+  height: 100vh;
+}

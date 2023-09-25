@@ -54,3 +54,25 @@
   transform: translate(-50%, -50%);
   font-size: 30px;
 }
+
+.nationsContainer{
+  width: 80%;
+  margin: auto;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.cardContainer{
+  width: 22%;
+  height: 65%;
+  border-radius: 34px;
+  background-color: black;
+  margin-top: -50px;
+  cursor: pointer;
+}
+.cardImage{
+  width: 100%;
+  height: 100%;
+}
