@@ -1,9 +1,7 @@
 "use client";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import styles from "./Motion.module.css";
-
-import { Suspense } from "react";
 import  Loading  from "./loading";
 
 export default function Motion(props: any) {
@@ -21,7 +19,7 @@ export default function Motion(props: any) {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 20 }}
           transition={{ delay: 0.2 }}
-          className={styles.motiondiv}
+          className={""}
         >
           {props.children}
         </motion.div>
