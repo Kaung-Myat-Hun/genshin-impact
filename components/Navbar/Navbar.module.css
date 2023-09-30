@@ -4,7 +4,7 @@
   backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
     background-color: rgba(17, 25, 40, 0.671);
-  position: fixed;
+  position: sticky;
   top: 0;
 }
 .navLinksContainer{

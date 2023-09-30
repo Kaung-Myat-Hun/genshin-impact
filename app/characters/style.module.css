@@ -2,8 +2,7 @@
   background-image: url('../../public/background/scroll-bg.webp');
   background-position: bottom;
   background-size: cover;
-  padding: 10vh 0px 16vh;
-  height: 100vh;
+  padding: 7vh 0px 5vh;
 }
 .btn{
   width: 150px;
